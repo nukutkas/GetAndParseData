@@ -30,5 +30,22 @@ class MainViewController: UICollectionViewController {
     }
 
     // MARK: UICollectionViewDelegate
-
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let action = actions[indexPath.row]
+        
+        switch action {
+        case "Download Image":
+            performSegue(withIdentifier: "ShowImage", sender: self)
+        case "GET":
+            print("GET")
+        case "POST":
+            print("POST")
+        case "Our Courses":
+            performSegue(withIdentifier: "OurCourses", sender: self)
+        case "Upload Image":
+            print("Upload Image")
+        default:
+            break
+        }
+    }
 }

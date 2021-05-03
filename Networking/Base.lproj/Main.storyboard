@@ -245,8 +245,8 @@
                     </collectionView>
                     <navigationItem key="navigationItem" id="A20-Sa-2dc"/>
                     <connections>
-                        <segue destination="eEq-kV-HBK" kind="show" identifier="showImage" id="CqR-Zz-eK3"/>
-                        <segue destination="Okz-m4-eD1" kind="show" identifier="ourCourses" id="Lkk-NU-hzs"/>
+                        <segue destination="eEq-kV-HBK" kind="show" identifier="ShowImage" id="CqR-Zz-eK3"/>
+                        <segue destination="Okz-m4-eD1" kind="show" identifier="OurCourses" id="Lkk-NU-hzs"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsg-3U-hWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
