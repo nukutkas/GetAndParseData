@@ -9,7 +9,7 @@
 import UIKit
 
 class NetworkManager {
-
+    
     
     static func getRequest(url: String) {
         
@@ -60,4 +60,45 @@ class NetworkManager {
             }
         } .resume()
     }
+    
+    static func downloadImage(url: String, completion: @escaping (_ image: UIImage)->()) {
+        
+        guard let url = URL(string: url) else { return }
+        
+        let session = URLSession.shared
+        session.dataTask(with: url) { (data, response, error) in
+            if let data = data, let image = UIImage(data: data) {
+                DispatchQueue.main.async {
+                    completion(image)
+                }
+            }
+        } .resume()
+    }
+    
+    static func fetchData(url: String, completion: @escaping (_ courses: [Course])->()) {
+        
+        guard let url = URL(string: url) else { return }
+        
+        URLSession.shared.dataTask(with: url) { (data, _, _) in
+            
+            guard let data = data else { return }
+            
+            do {
+                let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                
+                let courses = try decoder.decode([Course].self, from: data)
+                
+                completion(courses)
+                
+                
+            } catch let error {
+                print("Error serialization json", error)
+            }
+            
+            
+        }.resume()
+    }
 }
+
+
