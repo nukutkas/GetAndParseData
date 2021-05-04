@@ -24,6 +24,17 @@ private let uploadImage = "https://api.imgur.com/3/image"
 class MainViewController: UICollectionViewController {
     
     let actions = Actions.allCases
+    private var alert: UIAlertController!
+    
+    private func showAlert() {
+        
+        alert = UIAlertController(title: "Downloading...", message: "0%", preferredStyle: .alert)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive, handler: nil)
+        
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+    }
     
     // MARK: UICollectionViewDataSource
     
@@ -54,6 +65,7 @@ class MainViewController: UICollectionViewController {
         case .uploadImage:
             NetworkManager.uploadImage(url: uploadImage)
         case .downloadFile:
+            showAlert()
             print(action.rawValue)
         }
     }
