@@ -72,23 +72,79 @@
 		A83C301F2108401A00592AE4 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				E596EFC72641B58C0022C7A2 /* Services */,
+				E596EFC92641B59D0022C7A2 /* ViewControllers */,
+				E596EFCD2641B5BD0022C7A2 /* Models */,
+				E596EFCB2641B5B20022C7A2 /* CustomCells */,
+				E596EFCF2641B5C50022C7A2 /* Storyboards */,
+				E596EFC52641B57E0022C7A2 /* Supporting files */,
+				E596EFD02641B5D10022C7A2 /* Sources */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E596EFC52641B57E0022C7A2 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
 				A83C30202108401A00592AE4 /* AppDelegate.swift */,
+				A83C302C2108401B00592AE4 /* Info.plist */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		E596EFC72641B58C0022C7A2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
 				E596EFBD264177E20022C7A2 /* NetworkManager.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E596EFC92641B59D0022C7A2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
 				A806CF93210B4EA300574064 /* ImageViewController.swift */,
 				A8255C8321410AFA0074F6D0 /* CoursesViewController.swift */,
+				A8255C7F214103450074F6D0 /* WebViewController.swift */,
+				E59BDD71264053D200B88B95 /* MainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E596EFCB2641B5B20022C7A2 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				A8255C8521410DFE0074F6D0 /* TableViewCell.swift */,
+				E59BDD742640566E00B88B95 /* CollectionViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		E596EFCD2641B5BD0022C7A2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				E59BDD652640100600B88B95 /* Course.swift */,
 				E596EFC12641AEBB0022C7A2 /* ImageProperties.swift */,
 				E59BDD68264016E700B88B95 /* WebsiteDescription.swift */,
-				A8255C8521410DFE0074F6D0 /* TableViewCell.swift */,
-				A8255C7F214103450074F6D0 /* WebViewController.swift */,
-				E59BDD71264053D200B88B95 /* MainViewController.swift */,
-				E59BDD742640566E00B88B95 /* CollectionViewCell.swift */,
-				A83C30242108401A00592AE4 /* Main.storyboard */,
-				A83C30272108401B00592AE4 /* Assets.xcassets */,
-				A83C30292108401B00592AE4 /* LaunchScreen.storyboard */,
-				A83C302C2108401B00592AE4 /* Info.plist */,
 			);
-			path = Networking;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E596EFCF2641B5C50022C7A2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A83C30242108401A00592AE4 /* Main.storyboard */,
+				A83C30292108401B00592AE4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E596EFD02641B5D10022C7A2 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A83C30272108401B00592AE4 /* Assets.xcassets */,
+			);
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -251,6 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				ONLY_ACTIVE_ARCH = YES;
@@ -306,6 +363,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -320,8 +378,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5H969S6YFE;
-				INFOPLIST_FILE = Networking/Info.plist;
+				DEVELOPMENT_TEAM = Z4HK5Y82J4;
+				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,8 +397,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 5H969S6YFE;
-				INFOPLIST_FILE = Networking/Info.plist;
+				DEVELOPMENT_TEAM = Z4HK5Y82J4;
+				INFOPLIST_FILE = "Networking/Supporting files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
