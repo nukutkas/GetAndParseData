@@ -1,18 +1,19 @@
 //
-//  ViewController.swift
+//  NetworkManager.swift
 //  Networking
 //
-//  Created by Татьяна Кочетова on 03.05.2021.
+//  Created by Татьяна Кочетова on 04.05.2021.
 //  Copyright © 2021 Nikita Kochetov. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class NetworkManager {
+
     
-    @IBAction func getRequest(_ sender: Any) {
+    static func getRequest(url: String) {
         
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string: url) else { return }
         
         let session = URLSession.shared
         session.dataTask(with: url) { (data, response, error) in
@@ -31,9 +32,9 @@ class ViewController: UIViewController {
         }.resume()
     }
     
-    @IBAction func postRequest(_ sender: Any) {
+    static  func postRequest(url: String) {
         
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/posts") else { return }
+        guard let url = URL(string: url) else { return }
         
         let userData = ["Course": "Networking", "Lesson": "GET and POST"]
         
@@ -59,6 +60,4 @@ class ViewController: UIViewController {
             }
         } .resume()
     }
-    
 }
-

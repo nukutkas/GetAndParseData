@@ -9,10 +9,11 @@
 import UIKit
 
 private let reuseIdentifier = "Cell"
+private let url = "https://jsonplaceholder.typicode.com/posts"
 
 class MainViewController: UICollectionViewController {
     
-    let actions = ["Download Image", "GET", "POST", "OUR COURSES", "Upload Image"]
+    let actions = ["Download Image", "GET", "POST", "Our Courses", "Upload Image"]
 
 
 
@@ -37,9 +38,9 @@ class MainViewController: UICollectionViewController {
         case "Download Image":
             performSegue(withIdentifier: "ShowImage", sender: self)
         case "GET":
-            print("GET")
+            NetworkManager.getRequest(url: url)
         case "POST":
-            print("POST")
+            NetworkManager.postRequest(url: url)
         case "Our Courses":
             performSegue(withIdentifier: "OurCourses", sender: self)
         case "Upload Image":
