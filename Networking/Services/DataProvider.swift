@@ -68,7 +68,7 @@ extension DataProvider: URLSessionDownloadDelegate {
         
         guard totalBytesExpectedToWrite != NSURLSessionTransferSizeUnknown else { return }
         
-        let progress = Double(totalBytesWritten / totalBytesExpectedToWrite)
+        let progress = Double(totalBytesWritten) / Double(totalBytesExpectedToWrite)
         print("Download: \(progress)")
         
         DispatchQueue.main.async {
