@@ -17,6 +17,7 @@ enum Actions: String, CaseIterable {
     case ourCourses = "Our Courses"
     case uploadImage = "Upload Image"
     case downloadFile = "Download File"
+    case ourCoursesAlamofire = "Our Courses (Alamofire)"
 }
 private let reuseIdentifier = "Cell"
 private let url = "https://jsonplaceholder.typicode.com/posts"
@@ -121,6 +122,8 @@ class MainViewController: UICollectionViewController {
         case .downloadFile:
             showAlert()
             dataProvider.startDownload()
+        case .ourCoursesAlamofire:
+            print(action.rawValue)
         }
     }
 }
