@@ -15,18 +15,14 @@ class AlamofireNetworkRequest {
         
         guard let url = URL(string: url) else { return }
         
-        AF.request(url, method: .get).responseJSON { (response) in
+        AF.request(url, method: .get).validate().responseJSON { (response) in
              
-            guard let statusCode = response.response?.statusCode else { return }
+            switch response.result {
             
-            print("statusCode: ", statusCode)
-            
-            if (200..<300).contains(statusCode) {
-                let value = response.value
-                print("value: ", value ?? "nil")
-            } else {
-                let error = response.error
-                print(error ?? "error")
+            case .success(let value):
+                print(value)
+            case .failure(let error):
+                print(error)
             }
         }
     }
