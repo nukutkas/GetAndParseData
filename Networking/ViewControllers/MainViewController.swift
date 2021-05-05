@@ -123,9 +123,26 @@ class MainViewController: UICollectionViewController {
             showAlert()
             dataProvider.startDownload()
         case .ourCoursesAlamofire:
-            print(action.rawValue)
+            performSegue(withIdentifier: "OurCoursesWithAlamofire", sender: self)
         }
     }
+    
+    // MARK: Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let coursesVC = segue.destination as? CoursesViewController
+        
+        switch segue.identifier {
+        case "OurCourses":
+            coursesVC?.fetchData()
+        case "OurCoursesWithAlamofire":
+            coursesVC?.fetchDataWithAlamofire()
+        default:
+            break
+        }
+    }
+    
+    
 }
 
 extension MainViewController {
