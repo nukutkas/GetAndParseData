@@ -16,7 +16,18 @@ class AlamofireNetworkRequest {
         guard let url = URL(string: url) else { return }
         
         AF.request(url, method: .get).responseJSON { (response) in
-            print(response)
+             
+            guard let statusCode = response.response?.statusCode else { return }
+            
+            print("statusCode: ", statusCode)
+            
+            if (200..<300).contains(statusCode) {
+                let value = response.value
+                print("value: ", value ?? "nil")
+            } else {
+                let error = response.error
+                print(error ?? "error")
+            }
         }
     }
 }
