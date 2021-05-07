@@ -11,7 +11,7 @@ import Alamofire
 
 class AlamofireNetworkRequest {
     
-    static func sendRequest(url: String) {
+    static func sendRequest(url: String, completion: @escaping (_ courses: [Course])->()) {
         
         guard let url = URL(string: url) else { return }
         
@@ -20,7 +20,27 @@ class AlamofireNetworkRequest {
             switch response.result {
             
             case .success(let value):
+                
                 print(value)
+                
+                guard let arrayOfItems = value as? Array<[String: Any]> else { return }
+                
+                var courses = [Course]()
+                
+                for field in arrayOfItems {
+                    let course = Course(id: field["id"] as? Int,
+                                        name: field["name"] as? String,
+                                        link: field["link"] as? String,
+                                        imageUrl: field["imageUrl"] as? String,
+                                        numberOfLessons: field["number_of_lessons"] as? Int,
+                                        numberOfTests: field["number_of_tests"] as? Int)
+                    courses.append(course)
+                }
+                
+                completion(courses)
+    
+    
+                
             case .failure(let error):
                 print(error)
             }
