@@ -18,7 +18,8 @@ enum Actions: String, CaseIterable {
     case uploadImage = "Upload Image"
     case downloadFile = "Download File"
     case ourCoursesAlamofire = "Our Courses (Alamofire)"
-    case responseData = "Response Data"
+    case responseData = "responseData"
+    case responseString = "responseString"
 }
 private let reuseIdentifier = "Cell"
 private let url = "https://jsonplaceholder.typicode.com/posts"
@@ -129,6 +130,8 @@ class MainViewController: UICollectionViewController {
         case .responseData:
             performSegue(withIdentifier: "ResponseData", sender: self)
             AlamofireNetworkRequest.responseData(url: swiftbookApi)
+        case .responseString:
+            AlamofireNetworkRequest.responseString(url: swiftbookApi)
         }
     }
     

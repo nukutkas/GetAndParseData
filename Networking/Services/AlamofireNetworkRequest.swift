@@ -42,4 +42,16 @@ class AlamofireNetworkRequest {
             }
         }
     }
+    
+    static func responseString(url: String) {
+        AF.request(url).responseString { (responseString) in
+            
+            switch responseString.result {
+            case .success(let string):
+            print(string)
+            case .failure(let error):
+            print(error)
+            }
+        }
+    }
 }
