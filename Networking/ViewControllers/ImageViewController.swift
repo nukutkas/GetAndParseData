@@ -32,4 +32,7 @@ class ImageViewController: UIViewController {
             self.imageView.image = image
         }
     }
+    func fetchDataWithAlamofire() {
+        
+    }
 }
