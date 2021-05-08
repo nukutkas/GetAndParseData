@@ -55,7 +55,9 @@
                     <navigationItem key="navigationItem" title="Image" id="tDy-0P-prn"/>
                     <connections>
                         <outlet property="activityIndicator" destination="YlX-cb-SYq" id="vaC-HA-64K"/>
+                        <outlet property="completedLabel" destination="XOV-sE-Joe" id="DRO-tn-6cC"/>
                         <outlet property="imageView" destination="PdE-uL-DIr" id="ECD-Xx-NIQ"/>
+                        <outlet property="progressView" destination="GEG-iK-7sz" id="6Pb-np-C8d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cav-LT-BQH" userLabel="First Responder" sceneMemberID="firstResponder"/>

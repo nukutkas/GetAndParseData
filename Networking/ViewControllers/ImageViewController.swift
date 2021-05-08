@@ -12,15 +12,20 @@ import Alamofire
 class ImageViewController: UIViewController {
     
     private let url = "https://applelives.com/wp-content/uploads/2016/03/iPhone-SE-11.jpeg"
+    private let largeImageUrl = "https://i.imgur.com/3416rvI.jpg"
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet var completedLabel: UILabel!
+    @IBOutlet var progressView: UIProgressView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         activityIndicator.isHidden = true
         activityIndicator.hidesWhenStopped = true
         fetchImage()
+        completedLabel.isHidden = true
+        progressView.isHidden = true
     }
     
     func fetchImage() {
@@ -46,5 +51,8 @@ class ImageViewController: UIViewController {
                 print(error)
             }
         }
+    }
+    func downloadImageWithProgress() {
+        
     }
 }
