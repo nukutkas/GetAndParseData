@@ -24,16 +24,32 @@
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="YlX-cb-SYq">
                                 <rect key="frame" x="177.5" y="345.5" width="20" height="20"/>
                             </activityIndicatorView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Completed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XOV-sE-Joe">
+                                <rect key="frame" x="145.5" y="414" width="84" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="GEG-iK-7sz">
+                                <rect key="frame" x="112.5" y="470" width="150" height="4"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1Im-uT-gJB"/>
+                                </constraints>
+                            </progressView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sDJ-Ie-o0x"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="GEG-iK-7sz" firstAttribute="top" secondItem="XOV-sE-Joe" secondAttribute="bottom" constant="35" id="8mM-uL-uPi"/>
+                            <constraint firstItem="XOV-sE-Joe" firstAttribute="centerX" secondItem="vtF-oI-IDi" secondAttribute="centerX" id="Xkc-92-epo"/>
                             <constraint firstItem="YlX-cb-SYq" firstAttribute="centerY" secondItem="PdE-uL-DIr" secondAttribute="centerY" id="bzl-43-ekf"/>
                             <constraint firstItem="YlX-cb-SYq" firstAttribute="centerX" secondItem="PdE-uL-DIr" secondAttribute="centerX" id="eir-P8-JuI"/>
                             <constraint firstItem="PdE-uL-DIr" firstAttribute="top" secondItem="sDJ-Ie-o0x" secondAttribute="top" id="emi-V5-p6M"/>
+                            <constraint firstItem="GEG-iK-7sz" firstAttribute="centerX" secondItem="vtF-oI-IDi" secondAttribute="centerX" id="evq-4l-sb9"/>
                             <constraint firstItem="PdE-uL-DIr" firstAttribute="leading" secondItem="sDJ-Ie-o0x" secondAttribute="leading" id="iFk-OH-1qW"/>
                             <constraint firstItem="PdE-uL-DIr" firstAttribute="trailing" secondItem="sDJ-Ie-o0x" secondAttribute="trailing" id="kTW-IZ-jwH"/>
                             <constraint firstItem="PdE-uL-DIr" firstAttribute="bottom" secondItem="vtF-oI-IDi" secondAttribute="bottom" id="oh4-LO-Vij"/>
+                            <constraint firstItem="XOV-sE-Joe" firstAttribute="top" secondItem="YlX-cb-SYq" secondAttribute="bottom" constant="48.5" id="u2r-3O-Js0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Image" id="tDy-0P-prn"/>
@@ -249,6 +265,7 @@
                         <segue destination="Okz-m4-eD1" kind="show" identifier="OurCourses" id="Lkk-NU-hzs"/>
                         <segue destination="Okz-m4-eD1" kind="show" identifier="OurCoursesWithAlamofire" id="x4m-bO-2eW"/>
                         <segue destination="eEq-kV-HBK" kind="show" identifier="ResponseData" id="Vvf-Ax-bMz"/>
+                        <segue destination="eEq-kV-HBK" kind="show" identifier="LargeImage" id="lvu-6N-2GQ"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsg-3U-hWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -276,7 +293,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="x4m-bO-2eW"/>
-        <segue reference="Vvf-Ax-bMz"/>
+        <segue reference="lvu-6N-2GQ"/>
     </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
