@@ -54,4 +54,17 @@ class AlamofireNetworkRequest {
             }
         }
     }
+    
+    static func response(url: String) {
+        
+        AF.request(url).response { (response) in
+            
+            guard
+                let data = response.data,
+                let string = String(data: data, encoding: .utf8)
+                else { return }
+            
+            print(string)
+        }
+    }
 }
