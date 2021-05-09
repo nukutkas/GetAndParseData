@@ -131,11 +131,11 @@ class MainViewController: UICollectionViewController {
             performSegue(withIdentifier: "OurCoursesWithAlamofire", sender: self)
         case .responseData:
             performSegue(withIdentifier: "ResponseData", sender: self)
-            AlamofireNetworkRequest.responseData(url: swiftbookApi)
+            AlamoFireNetworkRequest.responseData(url: swiftbookApi)
         case .responseString:
-            AlamofireNetworkRequest.responseString(url: swiftbookApi)
+            AlamoFireNetworkRequest.responseString(url: swiftbookApi)
         case .response:
-            AlamofireNetworkRequest.response(url: swiftbookApi)
+            AlamoFireNetworkRequest.response(url: swiftbookApi)
         case .downloadLargeImage:
             performSegue(withIdentifier: "LargeImage", sender: self)
         }
