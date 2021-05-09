@@ -34,24 +34,24 @@ class ImageViewController: UIViewController {
         }
     }
     func fetchDataWithAlamofire() {
-        AlamoFireNetworkRequest.downloadImage(url: url) { (image) in
+        AlamofireNetworkRequest.downloadImage(url: url) { (image) in
             
             self.activityIndicator.stopAnimating()
             self.imageView.image = image
         }
     }
     func downloadImageWithProgress() {
-        AlamoFireNetworkRequest.onProgress = { progress in
+        AlamofireNetworkRequest.onProgress = { progress in
             self.progressView.isHidden = false
             self.progressView.progress = Float(progress)
         }
         
-        AlamoFireNetworkRequest.completed = { completed in
+        AlamofireNetworkRequest.completed = { completed in
             self.completedLabel.isHidden = false
             self.completedLabel.text = completed
         }
         
-        AlamoFireNetworkRequest.downloadImageWithProgress(url: largeImageUrl) { (image) in
+        AlamofireNetworkRequest.downloadImageWithProgress(url: largeImageUrl) { (image) in
             self.activityIndicator.stopAnimating()
             self.completedLabel.isHidden = true
             self.progressView.isHidden = true

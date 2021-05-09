@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class AlamoFireNetworkRequest {
+class AlamofireNetworkRequest {
     
     static var onProgress: ((Double) -> ())?
     static var completed: ((String) -> ())?
