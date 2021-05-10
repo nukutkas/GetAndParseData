@@ -269,6 +269,7 @@
                         <segue destination="eEq-kV-HBK" kind="show" identifier="ResponseData" id="Vvf-Ax-bMz"/>
                         <segue destination="eEq-kV-HBK" kind="show" identifier="LargeImage" id="lvu-6N-2GQ"/>
                         <segue destination="Okz-m4-eD1" kind="show" identifier="PostRequest" id="ncL-Ks-ddN"/>
+                        <segue destination="Okz-m4-eD1" kind="show" identifier="PutRequest" id="1pm-JU-EHD"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lsg-3U-hWd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -295,7 +296,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ncL-Ks-ddN"/>
+        <segue reference="1pm-JU-EHD"/>
         <segue reference="lvu-6N-2GQ"/>
     </inferredMetricsTieBreakers>
     <resources>

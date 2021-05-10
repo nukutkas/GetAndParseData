@@ -22,7 +22,8 @@ enum Actions: String, CaseIterable {
     case responseString = "responseString"
     case response = "response"
     case downloadLargeImage = "Download Large Image"
-    case postAlamofire = "POST with Alamofire "
+    case postAlamofire = "POST with Alamofire"
+    case putRequest = "PUT Request with Alamofire"
 }
 private let reuseIdentifier = "Cell"
 private let url = "https://jsonplaceholder.typicode.com/posts"
@@ -141,6 +142,8 @@ class MainViewController: UICollectionViewController {
             performSegue(withIdentifier: "LargeImage", sender: self)
         case .postAlamofire:
             performSegue(withIdentifier: "PostRequest", sender: self)
+        case .putRequest:
+            performSegue(withIdentifier: "PutRequest", sender: self)
         }
     }
     
@@ -163,7 +166,8 @@ class MainViewController: UICollectionViewController {
             imageVC?.downloadImageWithProgress()
         case "PostRequest":
             coursesVC?.postRequest()
-            
+        case "PutRequest":
+            coursesVC?.putRequest()
         default:
             break
         }
