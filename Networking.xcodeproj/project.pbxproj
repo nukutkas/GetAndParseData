@@ -98,9 +98,17 @@
 				E596EFCB2641B5B20022C7A2 /* CustomCells */,
 				E596EFCF2641B5C50022C7A2 /* Storyboards */,
 				E596EFC52641B57E0022C7A2 /* Supporting files */,
+				E581F23A265A9A5400C24C32 /* Screenshots */,
 				E596EFD02641B5D10022C7A2 /* Sources */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		E581F23A265A9A5400C24C32 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		E596EFC52641B57E0022C7A2 /* Supporting files */ = {
