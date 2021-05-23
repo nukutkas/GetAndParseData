@@ -18,6 +18,7 @@
 		D5D205F60D781E73804E9D04 /* Pods_Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5C2E032B68C522E7D878572 /* Pods_Networking.framework */; };
 		E581F248265A9F5300C24C32 /* Screenshot01.png in Resources */ = {isa = PBXBuildFile; fileRef = E581F246265A9F5200C24C32 /* Screenshot01.png */; };
 		E581F249265A9F5300C24C32 /* Screenshot02.png in Resources */ = {isa = PBXBuildFile; fileRef = E581F247265A9F5200C24C32 /* Screenshot02.png */; };
+		E581F24C265AA22600C24C32 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E581F24B265AA22600C24C32 /* README.md */; };
 		E596B037264317040075A9CE /* AlamofireNetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E596B036264317040075A9CE /* AlamofireNetworkRequest.swift */; };
 		E596EFBE264177E20022C7A2 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E596EFBD264177E20022C7A2 /* NetworkManager.swift */; };
 		E596EFC22641AEBB0022C7A2 /* ImageProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E596EFC12641AEBB0022C7A2 /* ImageProperties.swift */; };
@@ -43,6 +44,7 @@
 		A83C302C2108401B00592AE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E581F246265A9F5200C24C32 /* Screenshot01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot01.png; sourceTree = "<group>"; };
 		E581F247265A9F5200C24C32 /* Screenshot02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot02.png; sourceTree = "<group>"; };
+		E581F24B265AA22600C24C32 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E596B036264317040075A9CE /* AlamofireNetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireNetworkRequest.swift; sourceTree = "<group>"; };
 		E596EFBD264177E20022C7A2 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		E596EFC12641AEBB0022C7A2 /* ImageProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProperties.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				A83C301F2108401A00592AE4 /* Networking */,
+				E581F24B265AA22600C24C32 /* README.md */,
 				A83C301E2108401A00592AE4 /* Products */,
 				992F33915C001008D4917E5F /* Pods */,
 				E7FAC93857FC747C3DF34F46 /* Frameworks */,
@@ -252,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E581F24C265AA22600C24C32 /* README.md in Resources */,
 				A83C302B2108401B00592AE4 /* LaunchScreen.storyboard in Resources */,
 				A83C30282108401B00592AE4 /* Assets.xcassets in Resources */,
 				E581F248265A9F5300C24C32 /* Screenshot01.png in Resources */,
