@@ -1,6 +1,6 @@
 # GetAndParseData
 
-Network app for practising Network abilities including Alamofire.
+Network app for practice  Network abilities including Alamofire.
 
 # Installation
 
